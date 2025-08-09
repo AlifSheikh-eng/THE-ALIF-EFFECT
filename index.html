@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>THE ALIF EFFECT — Play Now</title>
+  <meta name="description" content="THE ALIF EFFECT — Smooth 2D flying shooter with mobile joysticks and desktop controls. Play now!" />
+  <meta name="keywords" content="Phaser, HTML5 game, flying shooter, mobile joystick, The Alif Effect" />
+  <meta property="og:title" content="Play THE ALIF EFFECT — 2D Flying Shooter" />
+  <meta property="og:description" content="Fast arcade shooter with touch joysticks for mobile and mouse/keyboard support for desktop." />
+  <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/860/860829.png" />
+  <meta property="og:url" content="https://alifsheikh-eng.github.io/THE-ALIF-EFFECT/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/860/860829.png" />
+
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rexrainbow/phaser3-rex-notes/dist/rexvirtualjoystickplugin.min.js"></script>
+
+  <style>
+    html,body{height:100%;margin:0;background:#000;}
+    #pauseBtn{position:absolute;top:10px;right:10px;z-index:999;padding:8px 12px;border-radius:6px;border:none;background:#fff8;color:#000;font-weight:700;cursor:pointer;display:none}
+    #leaderboard{position:absolute;left:10px;top:10px;z-index:999;color:#fff;font-family:sans-serif;display:none}
+    canvas{display:block;margin:0 auto; touch-action:none;}
+    /* Start overlay */
+    #overlay{position:fixed;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.85);z-index:1000}
+    #startBtn{font-size:28px;padding:14px 26px;background:#fff;color:#000;border-radius:8px;cursor:pointer;font-weight:700;display:inline-block}
+    #restartDiv{display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2000}
+  </style>
+</head>
+<body>
+  <div id="overlay"><div id="startBtn">▶ START GAME</div></div>
+  <button id="pauseBtn">Pause</button>
+  <div id="leaderboard"></div>
+  <div id="restartDiv"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
